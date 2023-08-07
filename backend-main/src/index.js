@@ -66,8 +66,8 @@ app.post("/api/upload", upload.single("avatar"), async (req, res) => {
 });
 
 
-app.listen(3000, function () {
+app.listen(3001, function () {
   const db = new Database();
   db.TestConnection();
-  console.log("Server is up and running http://localhost:3000");
+  console.log("Server is up and running http://localhost:3001");
 });

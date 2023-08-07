@@ -50,8 +50,8 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky top-0 z-50 flex justify-between items-center h-20 w-full mx-auto px-4 text-black transition-all ${
-        scrolling ? "bg-gray-200" : ""
+      className={`sticky top-0 z-50 flex justify-between items-center bg-black h-20 w-full mx-auto px-4 transition-all ${
+        scrolling ? "bg-gray-600 text-white" : ""
       }`}
     >
       <h1 className="w-full text-3xl font-bold text-[#00df9a] cursor-pointer" onClick={scrollToTop}>
@@ -67,7 +67,7 @@ const Header = () => {
           offset={-70}
           onSetActive={() => handleSetActiveLink("home")}
           className={`p-4 cursor-pointer ${
-            activeLink === "home" ? "text-green-500" : "text-black"
+            activeLink === "home" ? "text-green-500" : "text-white"
           } hover:text-green-500`}
         >
           Home
@@ -82,7 +82,7 @@ const Header = () => {
           offset={-70}
           onSetActive={() => handleSetActiveLink("about")}
           className={`p-4 cursor-pointer ${
-            activeLink === "about" ? "text-green-500" : "text-black"
+            activeLink === "about" ? "text-green-500" : "text-white"
           } hover:text-green-500`}
         >
           About
@@ -97,7 +97,7 @@ const Header = () => {
           offset={-70}
           onSetActive={() => handleSetActiveLink("services")}
           className={`p-4 cursor-pointer ${
-            activeLink === "services" ? "text-green-500" : "text-black"
+            activeLink === "services" ? "text-green-500" : "text-white"
           } hover:text-green-500`}
         >
           Services
@@ -112,7 +112,7 @@ const Header = () => {
           offset={-70}
           onSetActive={() => handleSetActiveLink("resources")}
           className={`p-4 cursor-pointer ${
-            activeLink === "resources" ? "text-green-500" : "text-black"
+            activeLink === "resources" ? "text-green-500" : "text-white"
           } hover:text-green-500`}
         >
           Resources
@@ -127,13 +127,13 @@ const Header = () => {
           offset={-70}
           onSetActive={() => handleSetActiveLink("contacts")}
           className={`p-4 cursor-pointer ${
-            activeLink === "contacts" ? "text-green-500" : "text-black"
+            activeLink === "contacts" ? "text-green-500" : "text-white"
           } hover:text-green-500`}
         >
           Contacts
         </Link>
       </ul>
-      <div onClick={handleNav} className="block md:hidden">
+      <div onClick={handleNav} className="block md:hidden cursor-pointer">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
       <ul
@@ -149,7 +149,7 @@ const Header = () => {
           smooth={true}
           duration={500}
           offset={-70}
-          className="p-4 border-b border-gray-600 w-100 cursor-pointer hover:text-[#00df9a] transition-colors duration-300"
+          className="p-4 border-b border-gray-600 w-100 cursor-pointer text-black hover:text-[#00df9a] transition-colors duration-300"
           activeClass="text-[#00df9a] font-bold"
         >
           Home
@@ -159,7 +159,7 @@ const Header = () => {
           smooth={true}
           duration={500}
           offset={-70}
-          className="p-4 border-b border-gray-600 w-100 cursor-pointer hover:text-[#00df9a] transition-colors duration-300"
+          className="p-4 border-b border-gray-600 w-100 cursor-pointer text-black hover:text-[#00df9a] transition-colors duration-300"
           activeClass="text-[#00df9a] font-bold"
         >
           About
@@ -169,7 +169,7 @@ const Header = () => {
           smooth={true}
           duration={500}
           offset={-70}
-          className="p-4 border-b border-gray-600 w-100 cursor-pointer hover:text-[#00df9a] transition-colors duration-300"
+          className="p-4 border-b border-gray-600 w-100 cursor-pointer text-black hover:text-[#00df9a] transition-colors duration-300"
           activeClass="text-[#00df9a] font-bold"
         >
           Services
@@ -179,7 +179,7 @@ const Header = () => {
           smooth={true}
           duration={500}
           offset={-70}
-          className="p-4 border-b border-gray-600 w-100 cursor-pointer hover:text-[#00df9a] transition-colors duration-300"
+          className="p-4 border-b border-gray-600 w-100 cursor-pointer text-black hover:text-[#00df9a] transition-colors duration-300"
           activeClass="text-[#00df9a] font-bold"
         >
           Resources
@@ -189,7 +189,7 @@ const Header = () => {
           smooth={true}
           duration={500}
           offset={-70}
-          className="p-4 border-b border-gray-600 w-100 cursor-pointer hover:text-[#00df9a] transition-colors duration-300"
+          className="p-4 border-b border-gray-600 w-100 cursor-pointer text-black hover:text-[#00df9a] transition-colors duration-300"
           activeClass="text-[#00df9a] font-bold"
         >
           Contacts

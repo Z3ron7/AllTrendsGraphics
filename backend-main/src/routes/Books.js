@@ -30,7 +30,7 @@ router.get("/", async (req, res) => {
   });
 
   router.post("/", async (req, res) => {
-    const { title, price, description, category, image } = req.body;
+    const { name, price, imageALT, category, image, status } = req.body;
   
     const db = new Database(); //Instance
     const conn = db.connection; // Defined conn for connection prop
@@ -38,8 +38,8 @@ router.get("/", async (req, res) => {
     await conn.connect((err) => {
       if (err) throw err;
       conn.query(
-        `INSERT into books (title, price, description, image, category) VALUES (?,?,?,?,?)`, 
-        [title,price,description,category,image,count],
+        `INSERT into books (name, price, image, imageALT, status, category) VALUES (?,?,?,?,?,?)`, 
+        [name,price,imageALT,category,image,status],
         (error, result) => {
           if (error) throw error;
           res.json({ success: true, message: "Successfully added" });
@@ -53,14 +53,14 @@ router.get("/", async (req, res) => {
     const conn = db.connection;
 
     const {id} = req.params
-    const {title,price,description,category} = req.body
+    const {name,price,status,category} = req.body
     
 
-    const query = "UPDATE books SET title = ?,  price = ?, description = ?, category = ? WHERE id = ?"
+    const query = "UPDATE books SET name = ?,  price = ?, status = ?, category = ? WHERE id = ?"
     const values = [
-        title,
+        name,
         parseFloat(price),
-        description,
+        status,
         category,
         id
     ]
