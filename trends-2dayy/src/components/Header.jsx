@@ -51,84 +51,93 @@ const Header = () => {
   return (
     <div
       className={`sticky top-0 z-50 flex justify-between items-center bg-black h-20 w-full mx-auto px-4 transition-all ${
-        scrolling ? "bg-gray-600 text-white" : ""
+        scrolling ? "bg-gray-900 text-white" : ""
       }`}
     >
-      <h1 className="w-full text-3xl font-bold text-[#00df9a] cursor-pointer" onClick={scrollToTop}>
+      <h1
+        className="w-full text-3xl font-bold text-[#00df9a] cursor-pointer"
+        onClick={scrollToTop}
+      >
         REACT.
       </h1>
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex ">
         <Link
-          activeClass="text-green-500"
+          activeClass="border-b-2 border-green-500"
           to="home"
           spy={true}
           smooth={true}
           duration={500}
           offset={-70}
           onSetActive={() => handleSetActiveLink("home")}
-          className={`p-4 cursor-pointer ${
-            activeLink === "home" ? "text-green-500" : "text-white"
-          } hover:text-green-500`}
+          className={`p-4 cursor-pointer text-white ${
+            activeLink === "home"
+              ? "border-b-2 border-green-500"
+              : "hover:text-green-500"
+          }`}
         >
           Home
         </Link>
 
         <Link
-          activeClass="text-green-500"
+          activeClass="border-b-2 border-green-500"
           to="about"
           spy={true}
           smooth={true}
           duration={500}
           offset={-70}
           onSetActive={() => handleSetActiveLink("about")}
-          className={`p-4 cursor-pointer ${
-            activeLink === "about" ? "text-green-500" : "text-white"
-          } hover:text-green-500`}
+          className={`p-4 cursor-pointer text-white ${
+            activeLink === "about" ? "border-b-2 border-green-500"
+            : "hover:text-green-500"
+        }`}
         >
           About
         </Link>
 
         <Link
-          activeClass="text-green-500"
+          activeClass="border-b-2 border-green-500"
           to="services"
           spy={true}
           smooth={true}
           duration={500}
           offset={-70}
           onSetActive={() => handleSetActiveLink("services")}
-          className={`p-4 cursor-pointer ${
-            activeLink === "services" ? "text-green-500" : "text-white"
-          } hover:text-green-500`}
+          className={`p-4 cursor-pointer text-white ${
+            activeLink === "services" ? "border-b-2 border-green-500"
+            : "hover:text-green-500"
+        }`}
         >
           Services
         </Link>
 
         <Link
-          activeClass="text-green-500"
+          activeClass="border-b-2 border-green-500"
           to="resources"
           spy={true}
           smooth={true}
           duration={500}
           offset={-70}
           onSetActive={() => handleSetActiveLink("resources")}
-          className={`p-4 cursor-pointer ${
-            activeLink === "resources" ? "text-green-500" : "text-white"
-          } hover:text-green-500`}
+          className={`p-4 cursor-pointer text-white ${
+            activeLink === "resources" ? "border-b-2 border-green-500"
+            : "hover:text-green-500"
+        }`}
         >
-          Resources
+          Pricing
         </Link>
 
         <Link
-          activeClass="text-green-500"
+          activeClass="border-b-2 border-green-500"
           to="contacts"
           spy={true}
           smooth={true}
           duration={500}
           offset={-70}
           onSetActive={() => handleSetActiveLink("contacts")}
-          className={`p-4 cursor-pointer ${
-            activeLink === "contacts" ? "text-green-500" : "text-white"
-          } hover:text-green-500`}
+          className={`p-4 cursor-pointer text-white ${
+            activeLink === "contacts" ? "border-b-2 border-green-500"
+            : "hover:text-green-500"
+        }`}
         >
           Contacts
         </Link>

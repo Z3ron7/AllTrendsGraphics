@@ -28,7 +28,7 @@ const Services = () => {
           className='w-3/4 h-4/5 shadow-xl flex flex-col py-4 my-4 rounded-lg hover:scale-105 duration-300 cursor-pointer'
           onClick={() => handleSectionClick('website')}
         >
-          <img className='w-50 h-4/5 mx-auto bg-transparent' src={Website} alt="/" />
+          <img className='w-40 h-3/5 mx-auto bg-transparent' src={Website} alt="/" />
           <h1 className='text-2xl font-bold text-center py-4'>Website</h1>
         </Link>
         <Link
@@ -38,7 +38,7 @@ const Services = () => {
           className='w-4/5 shadow-xl bg-gray-100 flex flex-col p-4 md:my-0 my-2 rounded-lg hover:scale-105 duration-300 cursor-pointer'
           onClick={() => handleSectionClick('book')}
         >
-          <img className='w-50 h-4/5 mx-auto bg-transparent' src={Book} alt="/" />
+          <img className='w-40 h-3/5 mx-auto bg-transparent' src={Book} alt="/" />
           <h1 className='text-2xl font-bold text-center py-4'>Book</h1>
         </Link>
         <Link
@@ -48,7 +48,7 @@ const Services = () => {
           className='w-3/4 h-4/5 shadow-xl flex flex-col py-4 my-4 rounded-lg hover:scale-105 duration-300 cursor-pointer'
           onClick={() => handleSectionClick('photo')}
         >
-          <img className='w-50 h-4/5 mx-auto bg-transparent' src={Photo} alt="/" />
+          <img className='w-40 h-3/5 mx-auto bg-transparent' src={Photo} alt="/" />
           <h1 className='text-2xl font-bold text-center py-4'>Photo</h1>
         </Link>
       </div>

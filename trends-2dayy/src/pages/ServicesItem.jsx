@@ -85,7 +85,7 @@ const ServicesItem = ({ activeSection }) => {
                  <img
                    src={product.imageSrc}
                    alt={product.imageAlt}
-                   className="h-50 w-50 object-cover object-center group-hover:opacity-75 cursor-pointer"
+                   className="h-50 w-50 object-cover object-center cursor-pointer"
                    onClick={() => openModal(product)}
                  />
                </div>
@@ -107,8 +107,8 @@ const ServicesItem = ({ activeSection }) => {
          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 modal-background" onClick={handleModalClick}>
            <div className="flex font-sans max-w-2xl bg-white rounded-lg">
              {/* Image */}
-             <div className="flex-none w-80 relative">
-               <img src={selectedProduct.imageSrc} alt={selectedProduct.imageAlt} className="absolute inset-0 w-full h-full object-cover" loading="lazy" onClick={() => openModal(selectedProduct)} />
+             <div className="flex w-80 relative">
+               <img src={selectedProduct.imageSrc} alt={selectedProduct.imageAlt} className="absolute inset-0 w-full h-full" loading="lazy" onClick={() => openModal(selectedProduct)} />
              </div>
              {/* Form */}
              <form className="flex-auto p-6 relative">
@@ -139,15 +139,11 @@ const ServicesItem = ({ activeSection }) => {
                </div>
                <div class="flex space-x-4 mb-5 text-sm font-medium">
                <div class="flex-auto flex space-x-4 justify-center items-center">
-                  <PayPalScriptProvider options={{initialOptions}}>
+                  <PayPalScriptProvider options={initialOptions}>
                     <PaypalPayment products={products}/>
                   </PayPalScriptProvider>
                 </div>
-                 <button class="flex-none flex items-center justify-center w-9 h-9 rounded-full text-violet-600 bg-violet-50" type="button" aria-label="Like">
-                   <svg width="20" height="20" fill="currentColor" aria-hidden="true">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
-                   </svg>
-                 </button>
+                 
                </div>
                <p class="text-sm text-slate-500">
                  Free shipping on all continental US orders.
