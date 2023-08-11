@@ -1,7 +1,7 @@
 import React from 'react';
 import Curve from '../assets/curve.png'
 import Typed from 'react-typed';
-import heroVid from '../assets/video.mp4';
+// import heroVid from '../assets/video.mp4';
 
 const Home = () => {
   return (
@@ -28,13 +28,13 @@ const Home = () => {
           </div>
           {/* img */}
           <div className='order-first md:order-last'>
-          <video
+          {/* <video
         className=' h-auto w-[750px] object-cover object-center'
         src={heroVid}
         autoPlay
         loop
         muted
-      />
+      /> */}
           </div>
         </div>
       </div>

@@ -18,6 +18,46 @@ const ServicesItem = ({ activeSection }) => {
         color: '500 GB Storage',
         price: '$149',
       },
+      {
+        id: 2,
+        imageSrc: Single,
+        imageAlt: 'Website Single User',
+        name: 'Single User',
+        color: '500 GB Storage',
+        price: '$149',
+      },
+      {
+        id: 3,
+        imageSrc: Single,
+        imageAlt: 'Website Single User',
+        name: 'Single User',
+        color: '500 GB Storage',
+        price: '$149',
+      },
+      {
+        id: 4,
+        imageSrc: Single,
+        imageAlt: 'Website Single User',
+        name: 'Single User',
+        color: '500 GB Storage',
+        price: '$149',
+      },
+      {
+        id: 5,
+        imageSrc: Single,
+        imageAlt: 'Website Single User',
+        name: 'Single User',
+        color: '500 GB Storage',
+        price: '$149',
+      },
+      {
+        id: 6,
+        imageSrc: Single,
+        imageAlt: 'Website Single User',
+        name: 'Single User',
+        color: '500 GB Storage',
+        price: '$149',
+      }
       // Add more items for the website category here if needed
     ],
     book: [
@@ -73,34 +113,36 @@ const ServicesItem = ({ activeSection }) => {
 };
 
    return (
-     <div className={`bg-white transition-max-h duration-1000 delay-200 ${activeSection ? 'max-h-[500px]' : 'max-h-0'} overflow-hidden`}>
+     <div className={`bg-white transition-max-h duration-1000 delay-200 ${activeSection ? 'max-h-[1400px]' : 'max-h-500px'} overflow-hidden`}>
        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-         <h2 className="sr-only">Products</h2>
- 
-         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-           {activeProducts.map((product) => (
-             <div key={product.id} className="group" >
-               {/* The onClick event is added above */}
-               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                 <img
-                   src={product.imageSrc}
-                   alt={product.imageAlt}
-                   className="h-50 w-50 object-cover object-center cursor-pointer"
-                   onClick={() => openModal(product)}
-                 />
-               </div>
-               <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
-               <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
-               <button
-                 className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg"
-                 onClick={() => openModal(product)} // Open the PayPal modal on button click
-               >
-                 Buy Now
-               </button>
-             </div>
-           ))}
-         </div>
-       </div>
+  <h2 className="sr-only">Products</h2>
+
+  {/* Apply the scrollbar to the product grid container */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-h-[600px] overflow-y-auto">
+    {activeProducts.map((product) => (
+      <div key={product.id} className="group flex flex-col items-center">
+        {/* The onClick event is added above */}
+        <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img
+            src={product.imageSrc}
+            alt={product.imageAlt}
+            className="h-50 w-50 object-cover object-center cursor-pointer"
+            onClick={() => openModal(product)}
+          />
+        </div>
+        <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
+        <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+        <button
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg"
+          onClick={() => openModal(product)} // Open the PayPal modal on button click
+        >
+          Buy Now
+        </button>
+      </div>
+    ))}
+  </div>
+</div>
+
        
        {/* Modal */}
        {isModalOpen && selectedProduct && (
